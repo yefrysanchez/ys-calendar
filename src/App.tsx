@@ -1,12 +1,14 @@
+import { BrowserRouter } from "react-router-dom"
+import AppRouter from "./router/AppRouter"
 
 
 function App() {
  
 
   return (
-    <main>
-      <h1>React Typescript Starter</h1>
-    </main>
+    <BrowserRouter>
+      <AppRouter/>
+    </BrowserRouter>
   )
 }
 
