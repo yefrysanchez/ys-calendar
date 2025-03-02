@@ -3,11 +3,11 @@ import Login from "../auth/pages/Login";
 import Calendar from "../calendar/pages/Calendar";
 
 const AppRouter = () => {
-  const authStatus = "authenticated";
+  const authStatus = "not-authenticated";
 
   return (
     <Routes>
-      {authStatus === "not-authenticated" ? (
+      {authStatus !== "not-authenticated" ? (
         <Route path="/auth/*" element={<Login />} />
       ) : (
         <Route path="/*" element={<Calendar />} />
